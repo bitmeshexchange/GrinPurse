@@ -1,7 +1,7 @@
 # GrinPurse
 A nice and useful GUI wallet for GRIN, developed by [bitmesh.com](https://bitmesh.com)
 
-## download
+## Download
 https://github.com/bitmeshexchange/GrinPurse/releases
 
 
