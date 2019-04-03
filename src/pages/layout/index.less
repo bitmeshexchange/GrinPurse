@@ -1,0 +1,241 @@
+.container {
+  padding-left: 215px;
+  height: 100%;
+
+  .connecting {
+    background: #fff;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.left, .right {
+  height: 100%;
+}
+
+.left {
+  width: 215px;
+  background: #2F3F64;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+}
+
+.status {
+  padding-top: 20px;
+}
+
+.progress_status {
+  font-size: 12px;
+  padding: 10px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.right {
+  width: 100%;
+
+  .right_wrapper {
+    padding: 10px;
+    overflow: hidden;
+    height: 100vh;
+  }
+}
+
+.left_top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.left_bottom {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 215px;
+  text-align: center;
+  font-size: 12px;
+  padding-bottom: 10px;
+  color: rgba(255,255,255, 0.6);
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+  
+  
+  span {
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+    background: url(src/assets/wallet/logoN.png);
+    background-size: 100% 100%;
+  }
+  // img {
+  //   width: 48px;
+  // }
+}
+
+.transaction_item {
+  width: 100%;
+}
+
+.block {
+  width: 140px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 20px;
+  background: rgba(0, 181, 255, 0.08);
+
+  .latest_height_label {
+    font-size:12px;
+    font-family: "PingFangSC-Regular";
+    font-weight:400;
+    color:rgba(255,255,255, 0.32);
+  }
+}
+
+.balance {
+  display: flex;
+  padding-bottom: 10px;
+}
+
+.balance_left {
+  background: #2F3F64;
+  width: 300px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .type {
+    color:rgba(255,255,255, 0.6);
+  }
+}
+
+.balance_right {
+  background: #2F3F64;
+  height: 120px;
+  flex: 1;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  .sending, .receiving {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .type {
+      color:rgba(255,255,255, 0.6);
+    }
+
+    .icon img {
+      height: 30px;
+    }
+
+    .amount {
+      font-size:12px;
+      font-family: "PingFangSC-Semibold";
+      font-weight:600;
+      color:rgba(0, 181, 255, 1);
+      padding-top: 5px;
+    }
+  }
+
+  .sending {
+    .amount {
+      color:rgba(227,118,118,1);
+    }
+  }
+
+  .action_button { 
+    color: #fff;
+    width:108px;
+    height:32px;
+    text-align: center;
+    line-height: 32px;
+    display: block;
+    background:linear-gradient(312deg,rgba(228,171,88,1) 0%,rgba(251,162,111,1) 100%);
+    border-radius:1px;
+    text-decoration: none;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &.recv {
+      margin-top: 10px;
+      background:linear-gradient(42deg,rgba(27,172,255,1) 0%,rgba(91,211,253,1) 100%);
+    }
+  }
+}
+
+.menu {
+  margin-top: 40px;
+  list-style: none;
+  padding-left: 0;
+  li {
+    padding-left: 0;
+    height: 50px;
+    line-height: 50px;
+    // text-align: center;
+    
+    display: block; 
+    
+
+    a {
+      padding-left: 40px;
+      display: block;
+      height: 50px;
+      line-height: 50px;
+      color: #fff;
+      font-size: 18px; // 
+      vertical-align: middle;
+      text-decoration: none;
+      // background: rgba(0, 0, 0 ,0.1);
+      &:hover {
+        background: rgba(0, 0, 0 ,0.1);
+      }
+    }
+    .exIcon {
+      height: 18px;
+      width: 18px; // 
+      display: inline-block;
+      background: url(src/assets/wallet/bitmesh.svg);
+      background-size: 100% 100%;
+      vertical-align: middle;
+      margin-right: 12px;
+    }
+    .homeIcon {
+      margin-right: 12px;
+      height: 18px;
+      width: 18px; // 
+      display: inline-block;
+      background: url(src/assets/wallet/wallet.svg);
+      background-size: 100% 100%;
+      vertical-align: middle;
+    }
+  }
+  .selected {
+    
+    a {
+      background: rgba(0, 0, 0 ,0.24);
+      &:hover {
+        background: rgba(0, 0, 0 ,0.24);
+      }
+    }
+    
+    // background-image: linear-gradient(-43deg, #1BACFF 0%, #5BD3FD 100%);
+  }
+}

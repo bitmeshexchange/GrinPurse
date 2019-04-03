@@ -1,0 +1,111 @@
+.container {
+  
+  height: 100%;
+  // min-height: 450px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  .main {
+    width: 380px;
+    margin: auto;
+  }
+  .title{
+    font-size: 32px;
+  }
+  .remind {
+    margin-top: 26px;
+    font-size: 18px;
+    color: #00B5FF;
+    line-height: 32px;
+  }
+  .form {
+    margin-top: 84px;
+    :global {
+      .ant-form-item{
+        text-align: left;
+      }
+    }
+  }
+
+  .handles {
+    // margin-bottom: 70px;
+    margin-top: 55px;
+    font-size: 0;
+    .back, .next {
+      color: #fff;
+      width: 120px;
+      height: 44px;
+      border-radius: 2px;
+      box-shadow: border-box;
+      font-size: 18px;
+      display: inline-block;
+      cursor: pointer;
+    }
+    .back {
+      border: 1px solid #FFFFFF;
+      line-height: 42px;
+      &:hover {
+        background: rgba(255, 255, 255, 0.1);
+      }
+    }
+    .next {
+      margin-left: 25px;
+      line-height: 44px;
+      background-image: linear-gradient(-130deg, #1BACFF 0%, #5BD3FD 100%);
+      &:hover {
+        background: linear-gradient(-130deg, #5BD3FD 100%, #1BACFF 0%);
+      } 
+    }
+  }
+}
+
+// .title {
+//   color: #fff;
+// }
+
+// .address_info {
+//   display: flex;
+//   align-items: center;
+// }
+
+// .warning {
+//   color: #e37676;
+//   font-weight: bold;
+//   padding-top: 10px;
+// }
+
+// .qrcode canvas{
+//   padding: 10px;
+//   background: #fff;
+// }
+
+
+// .address {
+//   padding-left: 30px;
+//   .content {
+//     background:rgba(255,255,255,0.08);
+//     height: 40px;
+//     line-height: 40px;
+//     font-size: 14px;
+//     padding: 0 20px;
+//     color: #fff;
+//   }
+
+//   .buttons {
+//     display: flex;
+//     padding-top: 20px;
+//     a {
+//       display: block;
+//       background:rgba(39,56,94,1);
+//       height: 32px;
+//       line-height: 32px;
+//       text-decoration: none;
+//       padding: 0 10px;
+//       margin-right: 20px;
+//     }
+//   }
+// }

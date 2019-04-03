@@ -1,0 +1,23 @@
+@import '~common/global.less';
+
+.container {
+  
+  .crumb {
+    margin-bottom: 10px ;
+    // color: @defaultColor;
+    :global {
+      span {
+        color: #fff;
+      }
+      .ant-breadcrumb-separator{
+        color: rgba(255,255,255,0.64);
+      }
+      // .ant-breadcrumb-link{
+      //   color: #fff;
+      // }
+    }
+  }
+  :global .ant-breadcrumb a {
+    color: rgba(255,255,255,0.64);
+  }
+}

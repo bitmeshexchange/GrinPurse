@@ -1,0 +1,49 @@
+.label-input {
+  display: block!important;
+  cursor: pointer;
+  color: #4a90e2;
+  z-index: 2;
+  width: 65px;
+  text-align: right;
+  position: absolute!important;
+  right: 15px;
+  top: 5px;
+}
+
+.custom-input {
+  left: 0;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+.b-custom-input {
+  position: relative;
+  .label {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    a {
+      text-decoration: none !important;
+    }
+  }
+}
+
+.countdown {
+  color: #ccc;
+}
+
+:global(.ant-input-number) {
+  width: 100%;
+}
+
+:global(.ant-input-group-compact) {
+  margin-bottom: 40px!important;
+}
+:global(.ant-select-lg) {
+  width: 100%;
+}

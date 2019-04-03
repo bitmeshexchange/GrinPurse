@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  .top {
+  	height: 130px;
+  	// background: #f00;
+  }
+  .bottom {
+		height: ~"calc(100% - 130px)";
+		// order: 1;
+		// overflow-y: scroll;
+		// overflow-x: hidden;
+  	// background: #0ff; 
+  	background: #27385E
+  }
+}
+.connecting {
+	// margin-top: 200px; 
+	text-align: center;
+	font-size: 20px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1000;
+	background: rgba(0, 0, 0, 0.7);
+	display: flex;
+	// align-items: center;
+	justify-content: center;
+	padding-top: 200px;
+	color: #00B5FF;
+	box-sizing: border-box;
+}

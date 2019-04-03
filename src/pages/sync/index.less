@@ -1,0 +1,63 @@
+.container {
+  height: 100%;
+  // min-height: 400px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .logo{
+    width: 130px;
+    height: 130px;
+    background: url(src/assets/wallet/logoN.png);
+    background-size: 100% 100%;
+    margin: 0 auto;
+  }
+  .info {
+    margin-top: 36px;
+    line-height: 46px;
+    font-size: 32px;
+  }
+  .statusTxt {
+  	margin-top: 70px;
+  	font-size: 18px;
+  	font-weight: 200;
+  }
+  .loadingContent {
+  	width: 260px;
+  	margin: 30px auto 0;
+  	// background: #f60;
+  	height: 4px;
+  	overflow: hidden;
+  	position: relative;
+  	border-radius: 2px;
+  	// background: #f00;
+  	.loading {
+  		position: absolute;
+  		width: 72px;
+  		height: 4px;
+  		background: url(src/assets/wallet/loading.png);
+  		background-size: 100% 100%;
+  		animation: loading 1.5s infinite linear;
+  		left: -72px;
+  		transform: -36px;
+  	}
+
+		@keyframes loading {
+	    0%{
+	    	left: -72px;
+	    }
+	    
+	    99.99%{
+	      left: 100%;
+	    }
+
+	    100%{
+	      left: -72px;
+	    }
+		}
+
+
+  }
+}

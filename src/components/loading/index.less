@@ -1,0 +1,48 @@
+.loading_container {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 400px;
+}
+
+.loading{
+	width:40px;
+	height:40px;
+	margin:auto;
+	display: inline-block;
+	// top:50%;
+	// left:50%;
+	// position:absolute;
+	// margin-top:-20px;
+	// margin-left:-20px;
+	background-color:#333;
+	background:#007bff;
+	border-radius:100%;
+	transition-timing-function:cubic-bezier(.86,0,.07,1);
+	-webkit-animation:pulse-load 1.2s infinite ease-in-out;
+	animation:pulse-load 1.2s infinite ease-in-out;
+}
+
+@-webkit-keyframes pulse-load{
+	0%{
+		-webkit-transform:scale(0)
+	}
+	100%{
+		-webkit-transform:scale(1);
+		opacity:0
+	}
+}
+
+@keyframes pulse-load{
+	0%{
+		-webkit-transform:scale(0);
+		transform:scale(0)
+	}
+	100%{
+		-webkit-transform:scale(1);
+		transform:scale(1);
+		opacity:0
+	}
+}

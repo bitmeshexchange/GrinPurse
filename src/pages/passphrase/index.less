@@ -1,0 +1,195 @@
+.container {
+  height: 100%;
+  // min-height: 500px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .title{
+    font-size: 32px;
+  }
+  .remind {
+    margin-top: 26px;
+    font-size: 18px;
+    color: #00B5FF;
+    line-height: 32px;
+  }
+  .loading {
+    margin-top: 15px;
+    height: 154px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .missPassword {
+    margin-top: 15px;
+    height: 154px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f5222d;
+    font-size: 18px;
+  
+  }
+  .wordsList {
+    margin-top: 15px;
+    li {
+      list-style: none;
+      // display: inline;
+      span {
+        margin-bottom: 10px;
+        display: inline-block;
+        line-height: 60px;
+        padding: ;
+        min-width: 120px;
+        box-sizing: border-box;
+        padding: 0 25px;
+        border-radius: 2px;
+        margin-right: 10px;
+        position: relative;
+        font-size: 24px;
+        background: rgba(255, 255, 255, 0.1);
+        &::after{
+          content: ' ';
+        }
+        // &::before {
+        //   content: '';
+        //   position: absolute;
+        //   top: 0;
+        //   right: 0;
+        //   left: 0;
+        //   bottom: 0;
+        //   opacity: 0.1;
+        //   background: #FFFFFF;
+        // }
+        &:last-child {
+          // margin-right: 0;
+        }
+      }
+
+    }
+    @media screen and (max-width: 1200px) {  
+     li { display: inline   }
+    }
+  }
+  .useage {
+    position: relative;
+    margin-top: 26px;
+    padding: 18px 54px;
+    font-size: 18px;
+    color: #E9A864;
+    display: inline-block;
+    max-width: 1100px;
+    // cursor: pointer;
+
+    &::before {
+      content: '';
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      opacity: 0.1;
+      background: #E9A864;
+    }
+
+    .copy, .copyDisabled {
+      color: #00B5FF;
+      margin-left: 20px;
+      display: inline-block;
+      cursor: pointer;
+      em {
+        vertical-align: 2px;
+        font-style: normal;
+        margin-left: 5px;
+      }
+    }
+    .copyDisabled {
+      color: #999;
+      cursor: not-allowed;
+    }
+    
+  }
+
+  .handles {
+    // margin-bottom: 70px;
+    margin-top: 55px;
+    font-size: 0;
+    .back, .next {
+      width: 120px;
+      height: 44px;
+      border-radius: 2px;
+      box-shadow: border-box;
+      font-size: 18px;
+      display: inline-block;
+      cursor: pointer;
+    }
+    .back {
+      border: 1px solid #FFFFFF;
+      line-height: 42px;
+      &:hover {
+        background: rgba(255, 255, 255, 0.1);
+      }
+    }
+    .next {
+      margin-left: 25px;
+      line-height: 44px;
+      background-image: linear-gradient(-130deg, #1BACFF 0%, #5BD3FD 100%);
+      &:hover {
+        background: linear-gradient(-130deg, #5BD3FD 100%, #1BACFF 0%);
+      } 
+    }
+  }
+}
+
+// .title {
+//   color: #fff;
+// }
+
+// .address_info {
+//   display: flex;
+//   align-items: center;
+// }
+
+// .warning {
+//   color: #e37676;
+//   font-weight: bold;
+//   padding-top: 10px;
+// }
+
+// .qrcode canvas{
+//   padding: 10px;
+//   background: #fff;
+// }
+
+
+// .address {
+//   padding-left: 30px;
+//   .content {
+//     background:rgba(255,255,255,0.08);
+//     height: 40px;
+//     line-height: 40px;
+//     font-size: 14px;
+//     padding: 0 20px;
+//     color: #fff;
+//   }
+
+//   .buttons {
+//     display: flex;
+//     padding-top: 20px;
+//     a {
+//       display: block;
+//       background:rgba(39,56,94,1);
+//       height: 32px;
+//       line-height: 32px;
+//       text-decoration: none;
+//       padding: 0 10px;
+//       margin-right: 20px;
+//     }
+//   }
+// }

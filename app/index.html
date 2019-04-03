@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+	<title>Grin Purse</title>
+		<style>
+		body {
+	    color: #fff;
+	    background: #131E3B;
+		}
+
+		::-webkit-scrollbar-track-piece {
+			background-color:#f8f8f8;
+		}
+
+		::-webkit-scrollbar {
+			width:0px;
+			height:9px;
+		}
+
+		::-webkit-scrollbar-thumb {
+			background-color:#dddddd;
+			background-clip:padding-box;
+			min-height:28px;
+		}
+
+		::-webkit-scrollbar-thumb:hover {
+			background-color:#bbb;
+		}
+		</style>
+		<link rel="stylesheet" href="./dist/index.css" />
+	  <script src="./dist/assets/react.production.min.js"></script>
+	<script src="./dist/assets/react-dom.production.min.js"></script>
+</head>
+
+<body class="dark">
+	<div id="root"></div>
+	<script>
+		var search = location.search;
+		if (search.indexOf('light') === -1) {
+			document.body.className = 'dark';
+		} else {
+			document.body.className = 'light';
+		}
+	</script>
+	<script src="./dist/index.js"></script>
+</body>
+
+</html>

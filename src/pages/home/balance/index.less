@@ -1,0 +1,128 @@
+.container {
+  display: flex;
+  height: 100%;
+}
+
+.left, .right {
+  height: 100%;
+}
+
+.left {
+  width: 20%;
+  background: #2F3F64;
+}
+
+.right {
+  width: 80%;
+
+  .right_wrapper {
+    padding: 10px;
+  }
+}
+
+.left_top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+  img {
+    width: 48px;
+  }
+}
+
+.transaction_item {
+  width: 100%;
+}
+
+.block {
+  width: 140px;
+  height: 60px;
+  text-align: center;
+  background: rgba(0, 181, 255, 0.08);
+}
+
+.balance {
+  display: flex;
+  padding-bottom: 10px;
+}
+
+.balance_left {
+  background: #2F3F64;
+  width: 300px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .type {
+    color:rgba(255,255,255, 0.6);
+  }
+}
+
+.balance_right {
+  background: #2F3F64;
+  height: 120px;
+  flex: 1;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  .sending, .receiving {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .type {
+      color:rgba(255,255,255, 0.6);
+    }
+
+    .icon img {
+      height: 22px;
+    }
+
+    .amount {
+      font-size:12px;
+      font-family: "PingFangSC-Semibold";
+      font-weight:600;
+      color:rgba(0, 181, 255, 1);
+      padding-top: 5px;
+    }
+  }
+
+  .sending {
+    .amount {
+      color:rgba(227,118,118,1);
+    }
+  }
+
+  .action_button {
+    color: #fff;
+    width:108px;
+    height:32px;
+    text-align: center;
+    line-height: 32px;
+    display: block;
+    background:linear-gradient(312deg,rgba(228,171,88,1) 0%,rgba(251,162,111,1) 100%);
+    border-radius:1px;
+    text-decoration: none;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &.recv {
+      margin-top: 10px;
+      background:linear-gradient(42deg,rgba(27,172,255,1) 0%,rgba(91,211,253,1) 100%);
+    }
+  }
+}

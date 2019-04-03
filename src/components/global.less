@@ -1,0 +1,55 @@
+/**
+* global stylesheet
+*/
+
+.price {
+  color: #00B5FF;
+}
+
+.danger {
+  // color: @red;
+}
+
+.green {
+  color: #4AAE1E;
+}
+
+.none {
+  display: none;
+}
+
+.coin-icon {
+  width: 24px;
+}
+
+.vertical-center-modal {
+  text-align: center;
+  white-space: nowrap;
+
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    width: 0;
+  }
+
+  :global(.ant-modal) {
+    display: inline-block;
+    vertical-align: middle;
+    top: 0;
+    text-align: left;
+  }
+}
+
+.danger_button {
+  // background-color: @red !important;
+  // border-color: @red !important;
+
+  &:hover,
+  &:focus {
+    color: #fff !important;
+    background-color: #d95b57 !important;
+    border-color: #d95b57 !important;
+  }
+}

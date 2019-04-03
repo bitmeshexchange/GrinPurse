@@ -1,0 +1,74 @@
+@primary_color: #00B5FF;
+@border_color: #D8D8D8;
+@red: #E76B43;
+@green: #1DBA75;
+@header_height: 38px;
+
+//黑色
+@dark_border_color: #363F4A;
+@dark_background: #131E3B;
+@dark_secondary: #2F3f64;
+
+//白色
+@light_background: #131E3B;// #FBFBFB;
+
+// 圆角
+@border_radius: 8px;
+
+
+// // 主要文字颜色
+// @defaultColor: #333;
+// // 次要文字颜色
+// @thinColor: #999;
+// // 主体内容背景色
+// @mainBg:#fff;
+// // 页头背景色
+// @headBg: #f5f6f7;
+// @border: 1px solid #E1E1E1;
+
+// 主要文字颜色
+@defaultColor: #fff;
+// 次要文字颜色
+@thinColor: rgba(255,255,255,0.64);
+// 主体内容背景色
+@mainBg: #27385E;
+// 页头背景色
+@headBg: #2F3F64;
+
+@border: 1px solid rgba(255,255,255,0.08);
+
+// :global {
+//   .hd-bg {
+//     background: @headBg;
+//   }
+//   .main-bg {
+//     background: @mainBg;
+//   }
+//   .main-color {
+//     color: @defaultColor;
+//   }
+//   .thin-color {
+//     color: @thinColor;
+//   }
+// }
+
+
+
+.red {
+  color: @red;
+}
+
+.green {
+  color: @green;
+}
+
+
+.no_label {
+  :global(.ant-form-item-label) {
+    visibility: hidden;
+  }
+}
+
+.coin-icon {
+  width: 24px;
+}

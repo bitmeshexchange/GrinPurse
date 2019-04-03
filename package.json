@@ -1,0 +1,141 @@
+{
+  "name": "GrinPurse",
+  "productName": "GrinPurse",
+  "author": "bitmesh.com",
+  "description": "A nice gui wallet for grin",
+  "private": true,
+  "main": "app/main.js",
+  "version": "0.0.2",
+  "scripts": {
+    "app": "electron .",
+    "start": "roadhog server",
+    "dev": "roadhog server",
+    "build": "roadhog build",
+    "build_ele": "electron-builder",
+    "proxy": "ESLINT=none  SOCKET_SERVER=http://127.0.0.1:8000 roadhog dev",
+    "build-dev": "env=dev app=otc roadhog build",
+    "build-rs": "electron-build-env neon build --release",
+    "lint": "eslint --ext .js src test",
+    "package": "npm-run-all package:*",
+    "package:mac": "electron-packager .  --overwrite --platform=darwin --arch=x64 --out=out --icon=assets/app-icon/mac/app.icns --osx-sign.identity='Developer ID Application: GitHub' --extend-info=assets/mac/info.plist",
+    "package:win": "electron-packager . --overwrite --platform=win32 --arch=ia32 --out=out --icon=assets/app-icon/win/app.ico",
+    "package:linux": "electron-packager . --overwrite --platform=linux --arch=x64 --out=out",
+    "package:sign-exe": "signcode './out/Electron API Demos-win32-ia32/Electron API Demos.exe' --cert ~/electron-api-demos.p12 --prompt --name 'Electron API Demos' --url 'http://electron.atom.io'",
+    "package:installer": "node ./script/installer.js",
+    "package:sign-installer": "signcode './out/windows-installer/ElectronAPIDemosSetup.exe' --cert ~/electron-api-demos.p12 --prompt --name 'Electron API Demos' --url 'http://electron.atom.io'",
+    "xpackage:mas": "./script/mas.sh",
+    "windows-store": "node ./script/windows-store.js",
+    "release": "node ./script/release.js",
+    "dist": "electron-builder --win --x64"
+  },
+  "build": {
+    "productName": "GrinPurse",
+    "appId": "org.bitmesh.com.grinpurse",
+    "directories": {
+      "output": "build"
+    },
+    "asar" : false,
+    "extraResources": [
+      {
+        "from": "bin",
+        "to": "bin",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ],
+    "files": [
+      "!out",
+      "!src",
+      "!test",
+      "!publisher.json",
+      "!README.md",
+      "!updates.json"
+    ],
+    "mac": {
+      "icon": "app/icons/app.icns"
+    },
+    "win": {
+      "icon": "app/icons/app.ico"
+    },
+    "linux": {
+      "icon": "app/icons"
+    }
+  },
+  "dependencies": {
+    "app-root-dir": "^1.0.2",
+    "bigi": "^1.4.2",
+    "bignumber.js": "^8.0.1",
+    "bip39": "2.5.0",
+    "bip66": "^1.1.5",
+    "bs58check": "^2.1.2",
+    "create-hmac": "^1.1.7",
+    "crypto-js": "^3.1.9-1",
+    "cutter": "^1.0.0",
+    "ecurve": "^1.0.6",
+    "elliptic": "^6.4.1",
+    "find-process": "^1.4.1",
+    "get-port": "^4.2.0",
+    "homedir-polyfill": "^1.0.3",
+    "mkdirp": "^0.5.1",
+    "msgpack5": "^4.2.1",
+    "nedb": "^1.8.0",
+    "ripemd160": "^2.0.2",
+    "safe-buffer": "^5.1.2",
+    "sdk-base": "^3.5.1",
+    "standard-ecies": "^1.0.0",
+    "temp-dir": "^1.0.0",
+    "typeforce": "^1.18.0",
+    "urllib": "^2.33.0",
+    "utility": "^1.15.1",
+    "uuid": "^3.3.2",
+    "wif": "^2.0.6",
+    "winston": "^3.2.1",
+    "winston-daily-rotate-file": "^3.8.0",
+    "ws": "^6.2.0"
+  },
+  "devDependencies": {
+    "antd": "^3.11.6",
+    "babel-plugin-dva-hmr": "^0.3.2",
+    "babel-plugin-import": "^1.11.0",
+    "babel-plugin-module-resolver": "^3.1.1",
+    "date-format-lite": "^17.7.0",
+    "debug": "^4.1.0",
+    "decimal.js-light": "^2.5.0",
+    "dva": "^2.4.1",
+    "dva-loading": "^2.0.6",
+    "electron": "4.0.3",
+    "electron-build-env": "^0.2.0",
+    "electron-builder": "^20.39.0",
+    "electron-debug": "^2.1.0",
+    "electron-devtools-installer": "^2.2.4",
+    "electron-installer-dmg": "^2.0.0",
+    "electron-packager": "^13.1.1",
+    "eslint": "^4.14.0",
+    "eslint-config-umi": "^0.1.1",
+    "eslint-plugin-flowtype": "^2.34.1",
+    "eslint-plugin-import": "^2.6.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.1.0",
+    "event-emit": "^0.3.5",
+    "flat": "^4.1.0",
+    "husky": "^0.12.0",
+    "long": "^4.0.0",
+    "moment": "^2.22.2",
+    "neon-cli": "^0.2.0",
+    "qrcode.react": "^0.8.0",
+    "querystringify": "^2.1.0",
+    "rc-form": "^2.2.6",
+    "react": "^16.2.0",
+    "react-classset": "^0.0.2",
+    "react-clipboard.js": "^2.0.1",
+    "react-countdown-now": "^1.3.0",
+    "react-dom": "^16.2.0",
+    "react-draggable": "^3.0.5",
+    "react-perf-devtool": "^3.1.8",
+    "react-sticky": "^6.0.3",
+    "react-sticky-el": "^1.0.20",
+    "redbox-react": "^1.4.3",
+    "roadhog": "^2.5.0-beta.2"
+  }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+	<title>Grin Purse</title>
+		<style>
+		body {
+		    color: #fff;
+		    background: #131E3B;
+		}
+		</style>
+		<link rel="stylesheet" href="index.css" />
+		<script src="./assets/react.production.min.js"></script>
+		<script src="./assets/react-dom.production.min.js"></script>
+</head>
+
+<body class="dark">
+	<div id="root"></div>
+
+	<script type="text/javascript">
+		global = window.global || {}
+		global.electron = require('electron');
+		const shell = electron.shell;
+		window.openUrl = url => {
+			shell.openExternal(url);
+		}
+  </script>
+
+	<script>
+		var search = location.search;
+		if (search.indexOf('light') === -1) {
+			document.body.className = 'dark';
+		} else {
+			document.body.className = 'light';
+		}
+	</script>
+	<script src="index.js"></script>
+	<style type="text/css">
+	  a[href="https://www.cnzz.com/stat/website.php?web_id=1276656292"] { display: none; }
+	</style>
+	<script type="text/javascript" src="https://s96.cnzz.com/z_stat.php?id=1276656292&web_id=1276656292"></script>
+
+</body>
+</html>

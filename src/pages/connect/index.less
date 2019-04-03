@@ -1,0 +1,159 @@
+.container {
+  padding-top: 115px;
+  text-align: center;
+  .title{
+    font-size: 32px;
+  }
+  .remind {
+    margin-top: 26px;
+    font-size: 18px;
+    color: #00B5FF;
+    line-height: 32px;
+  }
+  .list {
+    list-style: none;
+    width: 567px;
+    margin: 35px auto 0;
+    li {
+      cursor: pointer;
+      position: relative;
+      padding: 0 16px 0;
+      margin-bottom: 12px;
+      text-align: left;
+      .head {
+        padding: 16px 0;
+      }
+      .body {
+        display: none;
+        padding: 16px 0;
+        border-top: 1px solid rgba(255,255,255,0.04);
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        opacity: 0.1;
+        background: #E9A864;
+      }
+
+
+    }
+    li.selected {
+      .body {
+          display: block;
+        }
+      &::before {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        opacity: 1;
+        background: #27385E;
+
+      }
+    }
+  }
+  .useage {
+    position: relative;
+    margin-top: 26px;
+    padding: 18px 54px;
+    font-size: 18px;
+    color: #E9A864;
+    display: inline-block;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      opacity: 0.1;
+      background: #E9A864;
+    }
+    
+  }
+
+  .handles {
+    // margin-bottom: 70px;
+    margin-top: 55px;
+    font-size: 0;
+    .back, .next {
+      width: 120px;
+      height: 44px;
+      border-radius: 2px;
+      box-shadow: border-box;
+      font-size: 18px;
+      display: inline-block;
+      cursor: pointer;
+    }
+    .back {
+      border: 1px solid #FFFFFF;
+      line-height: 42px;
+      &:hover {
+        background: rgba(255, 255, 255, 0.1);
+      }
+    }
+    .next {
+      margin-left: 25px;
+      line-height: 44px;
+      background-image: linear-gradient(-130deg, #1BACFF 0%, #5BD3FD 100%);
+      &:hover {
+        background: linear-gradient(-130deg, #5BD3FD 100%, #1BACFF 0%);
+      } 
+    }
+  }
+}
+
+// .title {
+//   color: #fff;
+// }
+
+// .address_info {
+//   display: flex;
+//   align-items: center;
+// }
+
+// .warning {
+//   color: #e37676;
+//   font-weight: bold;
+//   padding-top: 10px;
+// }
+
+// .qrcode canvas{
+//   padding: 10px;
+//   background: #fff;
+// }
+
+
+// .address {
+//   padding-left: 30px;
+//   .content {
+//     background:rgba(255,255,255,0.08);
+//     height: 40px;
+//     line-height: 40px;
+//     font-size: 14px;
+//     padding: 0 20px;
+//     color: #fff;
+//   }
+
+//   .buttons {
+//     display: flex;
+//     padding-top: 20px;
+//     a {
+//       display: block;
+//       background:rgba(39,56,94,1);
+//       height: 32px;
+//       line-height: 32px;
+//       text-decoration: none;
+//       padding: 0 10px;
+//       margin-right: 20px;
+//     }
+//   }
+// }

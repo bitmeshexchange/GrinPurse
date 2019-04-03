@@ -1,0 +1,26 @@
+.container {
+  position: relative;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.before, .after {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.before {
+  left: 0;
+  padding: 0 10px;
+  pointer-events: none;
+}
+
+.after {
+  right: 10px;
+}

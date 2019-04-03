@@ -1,0 +1,90 @@
+.container {
+  padding-bottom: 20px;
+
+  .title {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.64);
+  }
+  .header {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.32);
+  }
+  .body {
+    font-size: 12px;
+    line-height: 30px;
+    
+    .row {
+      position: relative;
+    }
+  }
+  .depthBody,.historyBody {
+    height: ~"calc(100vh - 247px)";
+    overflow-y: scroll;
+  }
+  .historyBody {
+    font-size: 12px;
+    line-height: 30px;
+  }
+  :global {
+    .ant-table-thead > tr > th, .ant-table-tbody > tr > td {
+      padding: 8px 4px;
+      font-size: 12px;
+      border-bottom: none!important;
+      position: relative;
+      z-index: 1; // 
+    }
+  }
+}
+.noRecords {
+  text-align: center;
+  padding: 100px 0;
+}
+.depth, .history{
+  background: #2F3F64;
+  padding: 20px;
+  // height: ~"calc(100vh - 153px)";
+  // overflow-y: scroll;
+}
+.history {
+  
+}
+.total {
+  position: relative;
+  z-index: 1;
+}
+.amount {
+  position: relative;
+  z-index: 1;
+}
+// .row {
+//   width: 33.3333%;
+//   text-align: right;
+//   // background: #f00;
+//   position: relative; 
+// }
+.bg {
+  background: #1dba75;
+  position: absolute;
+  right: 0;
+  height: 100%;
+  opacity: .2;
+  pointer-events: none;
+  top: 0;
+}
+.asksbg {
+  background: #f7521d;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  opacity: .2;
+  pointer-events: none;
+  top: 0;
+}
+.askHistory {
+  color: #f7521d;
+
+}
+.bidHistory {
+  color: #1dba75;
+}
+

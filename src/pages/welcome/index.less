@@ -1,0 +1,71 @@
+.container {
+  // padding-top: 115px;
+  height: 100%;
+  // min-height: 450px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .logo{
+    width: 130px;
+    height: 130px;
+    background: url(src/assets/wallet/logoN.png);
+    background-size: 100% 100%;
+    margin: 0 auto;
+  }
+  .info {
+    margin-top: 36px;
+    line-height: 46px;
+    font-size: 32px;
+  }
+  .handles {
+    // margin-bottom: 70px; 
+    margin-top: 52px;
+    font-size: 0;
+    .new, .restore {
+      width: 180px;
+      height: 60px;
+      background-image: linear-gradient(-130deg, #1BACFF 0%, #5BD3FD 100%);
+      border-radius: 2px;
+      font-size: 18px;
+      display: inline-block;
+      line-height: 60px;
+      text-align: center;
+      cursor: pointer;
+      color: #fff;
+      border: 0;
+      &:hover {
+        background-image: linear-gradient(-130deg, #5BD3FD 100%, #1BACFF 0%);
+      }
+    }
+    .restore {
+      background-image: linear-gradient(47deg, #E4AB58 0%, #FBA26F 100%);
+      margin-left: 14px;
+      &:hover {
+
+        background-image: linear-gradient(47deg, #FBA26F 100%, #E4AB58 0%);
+      }
+    }
+  }
+  .agreement {
+    margin-top: 36px;
+    font-size: 16px;
+    color: #FFFFFF;
+    // margin-bottom: 70px;
+    .agreementTxt {
+      opacity: 0.64;
+    }
+    :global {
+      .ant-checkbox-wrapper {
+        font-size: 16px;
+        color: #FFFFFF;
+      }
+    }
+  }
+}
+.connecting {
+  font-size: 18px;
+}
+

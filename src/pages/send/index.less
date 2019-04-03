@@ -1,0 +1,65 @@
+.container {
+  height: ~"calc(100vh - 20px)";
+  overflow-y: scroll;
+}
+
+.send_form_container, .notice {
+  background: #2F3F64;
+  padding: 20px;
+}
+
+.send_form {
+  min-width: 562px;
+  width: 100%;
+  max-width: 600px;
+  padding-top: 10px;
+
+  :global .ant-form-item {
+    margin-bottom: 15px;
+    padding-bottom: 0;
+  }
+}
+
+.title {
+  color: #fff;
+}
+
+.buttons {
+  display: flex;
+  a {
+    display: block;
+    height: 32px;
+    line-height: 32px;
+    width: 80px;
+    text-align: center;
+    border:1px solid rgba(255,255,255, 0.6);
+    color: rgba(255,255,255,0.6);
+    margin-right: 10px;
+    text-decoration: none;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &.send {
+      background:linear-gradient(312deg,rgba(29,173,255,1) 0%,rgba(90,210,253,1) 97%);
+      color: #fff;
+      border: 0 none;
+    }
+  }
+}
+
+
+.notice {
+  margin-top: 10px;
+
+  h2 {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  color: rgba(255, 255, 255, 0.7);
+}
+.spendable{
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
