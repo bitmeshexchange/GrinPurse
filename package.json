@@ -11,6 +11,7 @@
     "start": "roadhog server",
     "dev": "roadhog server",
     "build": "roadhog build",
+    "build_rs": "neon build",
     "build_ele": "electron-builder",
     "proxy": "ESLINT=none  SOCKET_SERVER=http://127.0.0.1:8000 roadhog dev",
     "build-dev": "env=dev app=otc roadhog build",
@@ -34,7 +35,7 @@
     "directories": {
       "output": "build"
     },
-    "asar" : false,
+    "asar": false,
     "extraResources": [
       {
         "from": "bin",
@@ -136,6 +137,7 @@
     "react-sticky": "^6.0.3",
     "react-sticky-el": "^1.0.20",
     "redbox-react": "^1.4.3",
-    "roadhog": "^2.5.0-beta.2"
+    "roadhog": "^2.5.0-beta.2",
+    "neon-cli": "^0.2.0"
   }
 }

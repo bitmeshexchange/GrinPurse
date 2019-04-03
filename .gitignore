@@ -17,3 +17,4 @@ out
 index.node
 build
 bin
+Cargo.lock
